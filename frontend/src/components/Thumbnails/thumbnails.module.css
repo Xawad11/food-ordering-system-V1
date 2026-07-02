@@ -1,0 +1,181 @@
+/* List Container Styling */
+.list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Link Styling Inside List */
+.list li a {
+  display: block;
+  height: auto;
+  width: 20rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 1rem;
+  margin: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  color: #e72929;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Hover Effect for Links */
+.list li a:hover {
+  transform: translateY(-7px);  /* More dramatic lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);  /* Stronger shadow on hover */
+  background-color: #f1f1f1; /* Light background color on hover */
+}
+
+/* Image Styling */
+.image {
+  object-fit: cover;
+  height: 14.5rem;
+  width: 100%;
+  margin-bottom: 0;
+  transition: transform 0.3s ease;  /* Smooth transition for scaling */
+}
+
+/* Image Hover Effect */
+.list li a:hover .image {
+  transform: scale(1.08);  /* Slight zoom effect on hover */
+}
+
+/* Content Section Styling */
+.content {
+  padding: 0.5rem 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 0;
+  flex-grow: 1;
+}
+
+/* Favorite Icon Styling */
+.favorite {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;  /* Smooth transition for color change */
+}
+
+.favorite.not {
+  color: grey;
+}
+
+/* Stars Section Styling */
+.stars {
+  margin: 0.5rem 0;
+}
+
+/* Footer of Product Item */
+.product_item_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: auto;
+  width: 100%;
+  overflow: visible;
+}
+
+/* Origins Section Styling */
+.origins {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 0.2rem;
+  overflow: visible;
+}
+
+/* Origin Tags Styling */
+.origins span {
+  border-radius: 2rem;
+  background-color: #e7f5ff; /* Soft blue background */
+  display: inline-block;
+  font-size: 0.8rem;
+  color: #007bff; /* Blue text color */
+  margin-right: 0.3rem;
+  padding: 0 0.5rem;
+  margin-top: 0.2rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.origins span:hover {
+  background-color: #007bff; /* Blue on hover */
+  color: white; /* White text on hover */
+}
+
+/* Cook Time Styling */
+.cook_time {
+  font-size: 0.9rem;
+  flex: 3;
+  text-align: right;
+  color: #414141;
+}
+
+/* Price Styling */
+.price {
+  position: absolute;
+  bottom: 0;
+  left: 0.9rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.3rem 0.5rem;
+  color: #414141;
+  font-size: 1.1rem;
+  width: max-content;
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);  /* Add a subtle shadow around the price */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Price Hover Effect */
+.list li a:hover .price {
+  background-color: #00aaff; /* Light blue background on hover */
+  color: white; /* White text color */
+  box-shadow: 0 4px 8px rgba(0, 170, 255, 0.3); /* Blue shadow effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .list li a {
+    width: 45%;  /* Adjust width for medium screens */
+  }
+
+  .image {
+    height: 13rem;  /* Slightly smaller image height */
+  }
+
+  .price {
+    font-size: 1rem;  /* Smaller font size for price */
+  }
+}
+
+@media (max-width: 480px) {
+  .list li a {
+    width: 100%;  /* Full width for small screens */
+  }
+
+  .image {
+    height: 12rem;  /* Smaller image height for small screens */
+  }
+
+  .content {
+    padding: 0.5rem;
+  }
+
+  .price {
+    font-size: 1rem;  /* Slightly smaller font size for price */
+  }
+}

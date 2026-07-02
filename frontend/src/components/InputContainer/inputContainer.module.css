@@ -1,0 +1,73 @@
+/* Container for input field and label */
+.container {
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 0.8rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid #dcdfe1; /* Light grey border */
+  background-color: #f9f9f9; /* Slight background color for contrast */
+  transition: all 0.3s ease;
+}
+
+/* Container on focus or hover - subtle shadow effect */
+.container:hover,
+.container:focus-within {
+  border-color: #00aaff; /* Blue border on hover or focus */
+  box-shadow: 0 2px 8px rgba(0, 170, 255, 0.2); /* Light blue shadow */
+}
+
+/* Label styling */
+.label {
+  display: inline-block;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  color: #5f5f5f;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Floating label on focus */
+.container:focus-within .label {
+  color: #00aaff; /* Blue color when input is focused */
+  transform: translateY(-1.3rem); /* Floating effect */
+  font-size: 0.9rem;
+  margin-left: 0.8rem;
+}
+
+/* Content area with input field */
+.content {
+  padding: 0 1rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align content well */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .container {
+      padding-top: 0.3rem;
+      padding-bottom: 0.3rem;
+  }
+
+  .label {
+      font-size: 0.95rem;
+  }
+
+  .content {
+      padding: 0 0.5rem;
+      height: 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .label {
+      font-size: 0.9rem;
+  }
+
+  .content {
+      padding: 0 0.3rem;
+  }
+}

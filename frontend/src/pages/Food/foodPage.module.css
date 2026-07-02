@@ -1,0 +1,236 @@
+/* Container layout styling */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 2rem;
+  gap: 1.5rem; /* Reduced gap to fit within screen */
+  max-height: 100vh; /* Ensure content fits within viewport */
+  overflow: hidden; /* Hide excess content if necessary */
+}
+
+/* Dynamic sizing for children within the container */
+.container > * {
+  min-width: 22rem;
+  max-width: 35rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for individual elements in container */
+.container > *:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Image styling */
+.image {
+  border-radius: 3rem;
+  flex: 1 0;
+  object-fit: cover;
+  height: 30rem; /* Reduced height to fit screen */
+  margin: 1rem;
+  transition: transform 0.3s ease;
+}
+
+/* Zoom effect on image hover */
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Details section styling */
+.details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  border-radius: 3rem;
+  padding: 2rem;
+  color: black;
+  margin-left: 1rem;
+  background-color: #fafafa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for details */
+.details:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section for name and favorite icon */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Name styling */
+.name {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for name */
+.name:hover {
+  color: #e72929;
+}
+
+/* Favorite icon styling */
+.favorite {
+  color: #e72929;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Favorite icon when not active */
+.favorite.not {
+  color: grey;
+}
+
+/* Hover effect for favorite icon */
+.favorite:hover {
+  transform: scale(1.1);
+}
+
+/* Origins section styling */
+.origins {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0.7rem 0;
+}
+
+/* Styling for origin tags */
+.origins > span {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  margin: 0.5rem 0.5rem 0 0;
+  border-radius: 2rem;
+  background-color: aliceblue;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for origin tags */
+.origins > span:hover {
+  background-color: #e72929;
+  color: white;
+}
+
+/* Cook time styling */
+.cook_time {
+  margin-top: 1rem;
+}
+
+/* Remove color and background from cook time */
+.cook_time span {
+  padding: 0.6rem 2rem 0.6rem 0;
+  border-radius: 10rem;
+  font-size: 1.3rem;
+  background-color: transparent;
+  color: #414141;
+  transition: background-color 0.3s ease;
+}
+
+/* Price section styling */
+.price {
+  font-size: 1.8rem;
+  margin: 1.5rem 2rem 2rem 0; /* Reduced margins */
+  color: green;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Price label before content */
+.price::before {
+  content: 'Price: ';
+  color: darkgrey;
+}
+
+/* Button styling */
+.container button {
+  color: white;
+  background-color: #e72929;
+  border: none;
+  font-size: 1.2rem;
+  padding: 1rem;
+  border-radius: 10rem;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.container button:hover {
+  background-color: #d11f1f;
+  transform: scale(1.05);
+}
+
+/* Reviews section styling */
+.reviews {
+  margin-top: 20px;
+  max-height: 20rem; /* Limit height to avoid scrolling */
+  overflow-y: auto; /* Enable scroll within reviews if needed */
+}
+
+.reviewList {
+  margin-bottom: 20px;
+}
+
+.reviewItem {
+  padding: 10px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.reviewInput {
+  width: 100%;
+  height: 80px; /* Adjusted height for review input */
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+button[type="submit"] {
+  padding: 10px 15px;
+  background-color: #f9a825;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #f57f17;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image {
+    height: 25rem; /* Adjust image height for smaller screens */
+  }
+
+  .details {
+    padding: 1.5rem; /* Less padding on smaller screens */
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+    font-size: 1.6rem;
+  }
+
+  .container button {
+    width: 100%; /* Button full width on small screens */
+    font-size: 1rem;
+  }
+}

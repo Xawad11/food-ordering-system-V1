@@ -1,0 +1,28 @@
+/* Container to hold tags */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Styling for each tag */
+.container a {
+  background-color: #f0f0f0;
+  padding: 0.3rem 1rem;
+  margin: 0.2rem 0.15rem;
+  border-radius: 10rem;
+  font-weight: 600;
+  color: #007BFF;  /* Blue color for the text */
+  text-decoration: none;  /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover effects */
+.container a:hover {
+  background-color: #007BFF; /* Change background to blue on hover */
+  color: white;  /* Text turns white on hover */
+  transform: scale(1.1);  /* Slightly enlarge tag on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Add subtle shadow */
+}

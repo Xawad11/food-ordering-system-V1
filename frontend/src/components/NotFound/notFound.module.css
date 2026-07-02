@@ -1,0 +1,42 @@
+/* Container styles */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 100;
+  height: 15rem;
+  width: 100%; /* Ensure the container takes full width */
+  max-width: 600px; /* Limit max width */
+  margin: 0 auto; /* Center the container horizontally */
+  box-sizing: border-box; /* Include padding in width/height calculation */
+}
+
+/* Link (Button) styles */
+.container a {
+  font-size: 1rem;
+  background-color: #e72929;
+  color: white;
+  border-radius: 10rem;
+  padding: 0.7rem 1rem;
+  margin: 1rem;
+  opacity: 0.8;
+  text-decoration: none; /* Remove underline */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for the button */
+.container a:hover {
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Additional responsiveness for small screens */
+@media (max-width: 600px) {
+  .container {
+    height: auto; /* Remove fixed height for smaller screens */
+    padding: 1rem; /* Add padding for spacing */
+  }
+}

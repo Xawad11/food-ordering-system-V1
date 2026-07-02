@@ -1,0 +1,67 @@
+.container {
+  margin-top: 1rem;
+  display: flex;
+  margin: 0 0 6rem 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; /* Adds spacing between flex items */
+}
+
+.content {
+  width: 35rem;
+  margin: 0 3rem 0 0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content,
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs {
+  width: 100%;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.buttons_container {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  width: 35rem;
+  padding: 1rem;
+  text-align: center;
+  background: linear-gradient(135deg, #007bff, #00d4ff);
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin: 0; /* Removed the margin */
+}
+
+.buttons:hover {
+  background: linear-gradient(135deg, #0056b3, #0091d5);
+  transform: translateY(-2px);
+}
+
+.confirm_order_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.confirm_order_container strong {
+  font-size: 1.6rem;
+  margin-right: 20px; /* Add space between the text and the button */
+}

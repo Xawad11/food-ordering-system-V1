@@ -1,0 +1,144 @@
+/* General Header Styling */
+.header {
+  background: white;
+  padding: 0;
+  border-bottom: 1px solid #e72929;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header a {
+  color: #af1313;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.header a:hover {
+  background: #e72929;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px; /* Adds a smooth border radius on hover */
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem; /* Added padding to make it look more spacious */
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Logo Styling */
+.logo {
+  font-weight: bold;
+  padding: 1rem;
+  font-size: 1.8rem;
+  color: #e72929;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #d11f1f; /* Color change on hover */
+}
+
+/* Navigation Menu */
+.header ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+}
+
+.header ul a {
+  padding: 1rem;
+  display: inline-block;
+  font-size: 1.1rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.header ul a:hover {
+  color: #e72929;
+  text-decoration: underline;
+}
+
+/* Menu Container (for logged-in users) */
+.menu_container {
+  position: relative;
+}
+
+.menu_container:hover .menu {
+  display: block;
+}
+
+/* Dropdown Menu Styling */
+.menu {
+  position: absolute;
+  z-index: 10001;
+  background-color: whitesmoke;
+  display: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-top: 0.5rem;
+}
+
+.menu a {
+  display: block;
+  padding: 1rem;
+  color: #333;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  border-radius: 6px;
+}
+
+.menu a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Cart Count Badge Styling */
+.cart_count {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.cart_count:hover {
+  transform: scale(1.1); /* Add a scale effect when hovered */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .header ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header ul a {
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 1.6rem;
+  }
+}

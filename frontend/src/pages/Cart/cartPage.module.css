@@ -1,0 +1,247 @@
+/* Container for the entire layout */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 1.5rem;
+  margin-top: 0.5rem;
+  gap: 1rem; /* Added gap between flex items */
+}
+
+/* List styling */
+.list {
+  display: flex;
+  flex-direction: column;
+  flex: 3 0;
+  justify-content: space-evenly;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  list-style-type: none;
+  margin: 0.5rem;
+  padding: 0;
+  background-color: #fff5f5; /* Soft background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the list */
+.list:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* List item styling */
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Last list item - no border */
+.list li:last-child {
+  border: none;
+}
+
+/* List item image styling */
+.list li img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for list item image */
+.list li:hover img {
+  transform: scale(1.1); /* Zoom in image on hover */
+}
+
+/* Div styling inside list items */
+.list li div {
+  padding: 1rem;
+}
+
+/* Styling for divs (except the first one) inside list items */
+.list li div:not(:first-child) {
+  flex-basis: 18%;
+}
+
+/* Select dropdown styling */
+.list li select {
+  width: 3rem;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgrey;
+  font-size: 1.1rem;
+  font-weight: 100;
+  transition: border-color 0.3s ease;
+}
+
+/* Hover effect for select dropdown */
+.list li select:hover {
+  border-color: #e72929; /* Change border color on hover */
+}
+
+/* Remove button styling */
+.list .remove_button {
+  border-radius: 1rem;
+  border: none;
+  padding: 0.5rem;
+  color: #e72929;
+  opacity: 0.7;
+  outline: none;
+  background-color: #fff; /* White background for the button */
+  transition: opacity 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for remove button */
+.list .remove_button:hover {
+  opacity: 1;
+  cursor: pointer;
+  background-color: #ffe6e6; /* Slight color change on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Checkout container styling */
+.checkout {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 3;
+  height: 20rem;
+  border: 1px solid #ffbbbb;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  background-color: #fff5f5;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for the checkout container */
+.checkout:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Checkout div content */
+.checkout > div {
+  font-size: 1.4rem;
+  margin: 1rem;
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Foods count label */
+.checkout .foods_count {
+  margin-bottom: 1.5rem;
+}
+
+.checkout .foods_count::before {
+  content: 'Count: ';
+  color: grey;
+}
+
+/* Total price label */
+.checkout .total_price::before {
+  content: 'Price: ';
+  color: grey;
+}
+
+/* Checkout button styling */
+.checkout a {
+  padding: 1rem;
+  color: white;
+  background: linear-gradient(90deg, #e72929, #ff5733); /* Gradient for a colorful effect */
+  display: block;
+  width: 99%;
+  border-radius: 1rem;
+  text-align: center;
+  justify-self: center;
+  transition: background-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for checkout button */
+.checkout a:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  background: linear-gradient(90deg, #ff5733, #d11f1f); /* Reverse gradient effect on hover */
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .list,
+  .checkout {
+    width: 100%; /* Full width on smaller screens */
+  }
+
+  .checkout {
+    height: auto; /* Auto height for checkout on small screens */
+  }
+
+  .list li img {
+    width: 4rem;
+    height: 4rem; /* Smaller image on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .list li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .list li div:not(:first-child) {
+    flex-basis: 100%; /* Full width for other divs on small screens */
+  }
+
+  .checkout a {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Quantity Container */
+.quantityContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Quantity buttons */
+.quantityButton {
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quantityButton:hover {
+  background-color: #d11f1f;
+}
+
+/* Quantity value */
+.quantityValue {
+  font-size: 1.2rem;
+  font-weight: bold;
+  min-width: 2rem;
+  text-align: center;
+}

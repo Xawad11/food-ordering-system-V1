@@ -1,0 +1,162 @@
+/* General Page Styling for Compact Fit */
+.paymentContainer {
+  max-width: 450px; /* Further reduce max-width for compact view */
+  margin: 0 auto;
+  padding: 15px; /* Slightly increased padding for better spacing */
+  font-size: 13px; /* Adjusted font size for readability */
+  text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for more depth */
+}
+
+/* Style for Invoice Table */
+.invoiceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px; /* Increased margin for better spacing */
+}
+
+.invoiceTable th,
+.invoiceTable td {
+  border: 1px solid #e0e0e0;
+  padding: 8px; /* Increased padding for better readability */
+  text-align: center;
+  font-size: 14px; /* Slightly larger text for clarity */
+}
+
+.invoiceTable th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  color: #555; /* Darker text for headers */
+}
+
+/* Payment Options Styling */
+.paymentList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+.paymentList li {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Slightly larger gap between icon and text */
+  background: #fafafa; /* Light background for payment options */
+  color: #333; /* Dark text color */
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 14px; /* Adjusted font size for better legibility */
+}
+
+.paymentList li:hover {
+  background: #007bff; /* Blue color on hover */
+  color: white;
+  transform: translateY(-1px);
+}
+
+.paymentList li:active {
+  transform: scale(0.98);
+}
+
+/* Credit/Debit Card Button */
+.paymentList form button {
+  background-color: #007bff; /* Blue background for the button */
+  color: #fff;
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.paymentList form button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Selected Payment Method */
+.paymentMethodBox {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #e0f7fa;
+  border: 1px solid #00796b;
+  border-radius: 6px;
+  font-size: 16px;
+  color: #00796b;
+}
+
+/* Print Button Styling */
+.printButton {
+  margin-top: 20px;
+  padding: 8px 16px;
+  font-size: 14px; /* Adjusted font size */
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.printButton:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .paymentContainer {
+    padding: 12px;
+  }
+
+  .invoiceTable th, .invoiceTable td {
+    font-size: 12px; /* Slightly smaller font size on smaller screens */
+  }
+
+  .paymentList li {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .paymentList form button {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+
+  .printButton {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .paymentContainer {
+    max-width: 100%;
+    padding: 10px; /* Further reduced padding on small screens */
+  }
+
+  .invoiceTable th, .invoiceTable td {
+    font-size: 11px; /* Even smaller font size for small screens */
+  }
+
+  .paymentList li {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .paymentList form button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .printButton {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}

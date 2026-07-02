@@ -1,0 +1,61 @@
+/* Container for button */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Styling for buttons */
+.container button {
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  width: auto;
+  background: linear-gradient(135deg, #4f6d7a, #00aaff); /* Bluish gradient color */
+  color: white;
+  transition: all 0.4s ease;
+  opacity: 0.9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effects */
+.container button:hover {
+  cursor: pointer;
+  opacity: 1;
+  transform: translateY(-5px); /* Lift effect */
+  background: linear-gradient(135deg, #00aaff, #4f6d7a); /* Reverse gradient for hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Active (click) effect */
+.container button:active {
+  transform: scale(0.98); /* Slight shrink effect */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shrink shadow */
+  opacity: 1;
+  background: linear-gradient(135deg, #007bb5, #0099cc); /* Bluish color change on click */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .container {
+      padding: 0.5rem;
+  }
+  
+  .container button {
+      width: 90%;
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container button {
+      width: 80%;
+      padding: 0.8rem 1.5rem;
+  }
+}

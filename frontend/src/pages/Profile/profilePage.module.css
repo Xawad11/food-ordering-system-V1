@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 3rem;
+    background: linear-gradient(45deg, #ff6f61, #ffcc00); /* Example of colorful gradient background */
+    padding: 2rem; /* Optional padding */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.details {
+    width: 28rem;
+    background-color: white; /* Background color for details section */
+    padding: 1rem;
+    border-radius: 8px; /* Rounded corners for details section */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+.details:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Add a shadow effect on hover */
+}
