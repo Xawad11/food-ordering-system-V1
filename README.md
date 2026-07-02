@@ -1,114 +1,183 @@
 # 🍔 Food Ordering System
 
-A full-stack MERN-based food ordering platform that enables customers to browse menus, place orders, select delivery locations, download payment receipts, and leave reviews, while providing restaurant administrators with a dedicated dashboard for managing menu items, users, and customer orders.
+A full-stack MERN-based Food Ordering System that enables customers to discover restaurants, browse menus, place food orders, make secure online payments, and leave reviews through a modern and responsive web interface. The platform also provides restaurant administrators with a comprehensive dashboard to manage menu items, users, and customer orders.
 
-The application focuses on delivering a clean user experience with secure authentication, role-based authorization, responsive design, and efficient restaurant management.
+Built with scalability and usability in mind, the application integrates secure authentication, role-based authorization, map-based location selection, payment processing, cloud image storage, and automated email notifications to deliver a seamless end-to-end food ordering experience.
 
 ---
 
 ## ✨ Features
 
-### Authentication & Authorization
+### 👤 Authentication & User Management
 
-* User registration and login
-* Secure password authentication
+* Secure user registration and login
+* JWT-based authentication and authorization
 * Role-Based Access Control (Customer & Admin)
-* Protected admin routes
+* Duplicate account prevention and input validation
+* Admin user management
 
-### Customer Features
+### 🍽️ Food & Menu Management
 
 * Browse available food items
-* Search food by name
-* Filter foods by category
-* View food details
-* Shopping cart management
-* Checkout and order placement
+* Search foods by name
+* Filter foods by categories
+* View detailed food information
+* Add, update, and delete menu items (Admin)
+* Upload and manage food images
+
+### 🛒 Cart & Ordering
+
+* Add and remove items from cart
+* Review cart before checkout
+* Smooth order placement workflow
+* View order history
+
+### 📍 Delivery Location
+
 * Interactive map for delivery location selection
-* Download PDF receipt after checkout
-* Write, edit, and delete food reviews
+* Accurate customer location display using Leaflet
 
-### Admin Dashboard
+### 💳 Payment & Receipts
 
-* Add new menu items
-* Update existing food items
-* Delete menu items
+* Secure payment integration with **SSLCommerz**
+* Generate downloadable PDF payment receipts
+
+### 📧 Email Notifications
+
+* Automatic order confirmation emails via **Mailgun API**
+
+### ⭐ Review System
+
+* Add reviews for purchased food
+* Edit existing reviews
+* Delete reviews
+
+### 🛠️ Admin Dashboard
+
+* Manage food items
 * View registered users
 * Remove users when necessary
 * View and manage customer orders
 
-### Order Management
+### 🔒 Security
 
-* Order placement workflow
-* Order history management
-* Email confirmation after successful order placement
-
-### Security
-
-* Authentication middleware
+* Password hashing with bcrypt
+* JWT authentication
+* Protected API routes
 * Role-based authorization
-* Protected backend APIs
-* Secure data handling
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer           | Technologies                      |
-| --------------- | --------------------------------- |
-| Frontend        | React.js, HTML5, CSS3, JavaScript |
-| Backend         | Node.js, Express.js               |
-| Database        | MongoDB                           |
-| Authentication  | JWT                               |
-| Maps            | Leaflet                           |
-| PDF Generation  | jsPDF                             |
-| Image Storage   | Cloudinary                        |
-| Version Control | Git & GitHub                      |
+| Category            | Technologies                      |
+| ------------------- | --------------------------------- |
+| **Frontend**        | React.js, HTML5, CSS3, JavaScript |
+| **Backend**         | Node.js, Express.js               |
+| **Database**        | MongoDB, Mongoose                 |
+| **Authentication**  | JWT, bcryptjs                     |
+| **Payment Gateway** | SSLCommerz                        |
+| **Email Service**   | Mailgun API                       |
+| **Cloud Storage**   | Cloudinary                        |
+| **File Upload**     | Multer                            |
+| **Maps**            | Leaflet                           |
+| **PDF Generation**  | jsPDF                             |
+| **Version Control** | Git & GitHub                      |
 
 ---
 
-## 🚀 Highlights
+## 🚀 Key Highlights
 
-* Responsive user interface
-* Fast food search and category filtering
-* Interactive shopping cart
-* Map-based delivery location selection
-* PDF receipt generation
-* Customer review system
-* Role-based admin dashboard
-* Secure authentication and authorization
+* Responsive and mobile-friendly user interface
+* Secure authentication and role-based access control
+* Advanced food search and category filtering
+* Interactive shopping cart and checkout system
+* Secure online payment processing
+* Automated email confirmation after successful orders
+* Downloadable PDF receipts
+* Interactive delivery location selection
+* Customer review and feedback system
+* Comprehensive admin dashboard for restaurant management
 
 ---
 
-## 📁 Project Structure
+## 📂 Project Structure
 
-```
+```text
 Food-Ordering-System
-├── frontend
-│   ├── React.js
-│   └── UI Components
 │
-├── backend
-│   ├── Express.js API
-│   ├── MongoDB Models
-│   ├── Authentication Middleware
-│   └── Cloudinary Configuration
+├── frontend/
+│   ├── React Components
+│   ├── Pages
+│   ├── Context API
+│   ├── Services
+│   └── Assets
 │
-└── Database
+├── backend/
+│   ├── Controllers
+│   ├── Routes
+│   ├── Models
+│   ├── Middleware
+│   ├── Configuration
+│   └── APIs
+│
+└── Database/
     └── MongoDB
 ```
 
 ---
 
-## 📌 Future Enhancements
+## 📌 Getting Started
 
-* Online payment gateway integration
-* Live order tracking
-* Restaurant analytics dashboard
-* Promotional coupons and discounts
-* Push notifications
-* Favorites/Wishlist
-* Real-time order status updates
+### Clone the repository
+
+```bash
+git clone https://github.com/Xawad11/food-ordering-system-V1.git
+cd food-ordering-system-V1
+```
+
+### Install dependencies
+
+Frontend
+
+```bash
+cd frontend
+npm install
+```
+
+Backend
+
+```bash
+cd backend
+npm install
+```
+
+### Configure environment variables
+
+Create a `.env` file inside the backend directory and configure the required environment variables such as:
+
+* MongoDB URI
+* JWT Secret
+* Cloudinary Credentials
+* Mailgun API Credentials
+* SSLCommerz Credentials
+
+### Run the application
+
+Backend
+
+```bash
+npm run dev
+```
+
+Frontend
+
+```bash
+npm start
+```
 
 ---
 
-> Built as a full-stack MERN application to provide an intuitive food ordering experience while simplifying restaurant management through a centralized administrative dashboard.
+## 📖 Overview
+
+This project was developed to demonstrate a complete full-stack food ordering platform using the MERN stack. It combines secure authentication, online payment processing, cloud-based image management, automated email notifications, and an intuitive user interface to provide a complete digital food ordering solution for both customers and restaurant administrators.
