@@ -1,105 +1,114 @@
 # 🍔 Food Ordering System
 
-A full-stack web application that streamlines the online food ordering experience for both customers and restaurant owners. The platform enables users to browse menus, place orders, make secure online payments, and leave reviews, while providing restaurant administrators with a centralized dashboard to manage menu items, users, and orders.
+A full-stack MERN-based food ordering platform that enables customers to browse menus, place orders, select delivery locations, download payment receipts, and leave reviews, while providing restaurant administrators with a dedicated dashboard for managing menu items, users, and customer orders.
 
-Designed with a responsive interface and secure authentication, the system delivers an intuitive and efficient food ordering workflow from browsing to checkout.
+The application focuses on delivering a clean user experience with secure authentication, role-based authorization, responsive design, and efficient restaurant management.
 
 ---
 
 ## ✨ Features
 
-### 👤 Authentication & User Management
+### Authentication & Authorization
 
-* Secure user registration and login
-* Role-based access control (Customer & Restaurant Admin)
-* Input validation and duplicate account prevention
-* Admin user management
-
-### 🍽️ Menu Management
-
-* Add, edit, and delete food items
-* Organize foods by categories
-* Admin-only menu management dashboard
-
-### 🔍 Food Discovery
-
-* Search foods by name
-* Browse items using category filters
-* Detailed product pages
-
-### 🛒 Shopping Cart & Checkout
-
-* Add and remove items from cart
-* Review cart before checkout
-* Smooth ordering workflow
-
-### 📍 Delivery Location
-
-* Interactive map integration for delivery address selection
-* Accurate customer location display
-
-### 💳 Secure Payment
-
-* Online payment gateway integration
-* Support for multiple payment methods
-* Downloadable PDF payment receipt
-
-### 📦 Order Management
-
-* Place and manage food orders
-* Email confirmation after successful purchase
-* Restaurant order history dashboard
-
-### ⭐ Review System
-
-* Customers can post reviews on purchased food
-* Edit or delete existing reviews
-
-### 🔐 Security
-
-* Authentication and authorization
-* Role-Based Access Control (RBAC)
+* User registration and login
+* Secure password authentication
+* Role-Based Access Control (Customer & Admin)
 * Protected admin routes
-* Secure handling of user data
+
+### Customer Features
+
+* Browse available food items
+* Search food by name
+* Filter foods by category
+* View food details
+* Shopping cart management
+* Checkout and order placement
+* Interactive map for delivery location selection
+* Download PDF receipt after checkout
+* Write, edit, and delete food reviews
+
+### Admin Dashboard
+
+* Add new menu items
+* Update existing food items
+* Delete menu items
+* View registered users
+* Remove users when necessary
+* View and manage customer orders
+
+### Order Management
+
+* Order placement workflow
+* Order history management
+* Email confirmation after successful order placement
+
+### Security
+
+* Authentication middleware
+* Role-based authorization
+* Protected backend APIs
+* Secure data handling
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Category        | Technologies                      |
+| Layer           | Technologies                      |
 | --------------- | --------------------------------- |
 | Frontend        | React.js, HTML5, CSS3, JavaScript |
 | Backend         | Node.js, Express.js               |
 | Database        | MongoDB                           |
-| Payment         | SSLCommerz / Stripe / PayPal      |
-| APIs            | Google Maps API                   |
-| Version Control | Git, GitHub                       |
+| Authentication  | JWT                               |
+| Maps            | Leaflet                           |
+| PDF Generation  | jsPDF                             |
+| Image Storage   | Cloudinary                        |
+| Version Control | Git & GitHub                      |
 
 ---
 
-## 🚀 Core Highlights
+## 🚀 Highlights
 
-* Responsive and mobile-friendly UI
+* Responsive user interface
 * Fast food search and category filtering
-* Secure authentication system
-* Integrated online payment solution
+* Interactive shopping cart
 * Map-based delivery location selection
-* Email order confirmation
-* Customer review and feedback system
-* Comprehensive admin dashboard for restaurant management
+* PDF receipt generation
+* Customer review system
+* Role-based admin dashboard
+* Secure authentication and authorization
 
 ---
 
-## 📌 Future Improvements
+## 📁 Project Structure
 
+```
+Food-Ordering-System
+├── frontend
+│   ├── React.js
+│   └── UI Components
+│
+├── backend
+│   ├── Express.js API
+│   ├── MongoDB Models
+│   ├── Authentication Middleware
+│   └── Cloudinary Configuration
+│
+└── Database
+    └── MongoDB
+```
+
+---
+
+## 📌 Future Enhancements
+
+* Online payment gateway integration
 * Live order tracking
 * Restaurant analytics dashboard
 * Promotional coupons and discounts
-* Wishlist / Favorites
 * Push notifications
+* Favorites/Wishlist
 * Real-time order status updates
-* Multi-language support
 
 ---
 
-> A modern MERN-stack food ordering platform focused on usability, secure transactions, and efficient restaurant management.
+> Built as a full-stack MERN application to provide an intuitive food ordering experience while simplifying restaurant management through a centralized administrative dashboard.
